@@ -1,9 +1,12 @@
+ 
  const API_ENDPOINTS = {
-    topRatedMovies : 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',
-    popularMovies: 'https://api.themoviedb.org/3/movie/popular',
-    currentWatchingMovies: '',
-    trendingMovies: '',
-    upcoming: ''
+    topRatedMovies : '/movie/top_rated',
+    popularMovies: '/movie/popular',
+    currentWatchingMovies: '/movie/now_playing',
+    upcoming: '/movie/upcoming',
+    trendingMovies: (time_window) => `/trending/movie/${time_window}`,
+
+    movieDetailsById: (id) => `/movie/${id}`
 }
 
 module.exports = API_ENDPOINTS;
