@@ -4,7 +4,7 @@
     popularMovies: '/movie/popular',
     currentWatchingMovies: '/movie/now_playing',
     upcoming: '/movie/upcoming',
-    trendingMovies: (time_window) => `/trending/movie/${time_window}`,
+    trendingMovies: (time_window) => `/trending/movie/week`,
 
     movieDetailsById: (id) => `/movie/${id}`
 }

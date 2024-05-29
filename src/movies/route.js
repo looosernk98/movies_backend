@@ -20,6 +20,10 @@ router.get('/upcoming', async(req, res) => {
     const response = await getApi(API_ENDPOINTS.upcoming)
     res.send(response)
 });
+router.get('/trending', async(req, res) => {
+    const response = await getApi(API_ENDPOINTS.trendingMovies())
+    res.send(response)
+});
 
 router.get('/movie/:id', async(req, res) => {
     console.log(req?.query)
