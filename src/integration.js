@@ -5,8 +5,8 @@
     currentWatchingMovies: '/movie/now_playing',
     upcoming: '/movie/upcoming',
     trendingMovies: (time_window) => `/trending/movie/week`,
-
-    movieDetailsById: (id) => `/movie/${id}`
+    movieDetailsById: (id) => `/movie/${id}`,
+    recommendations: (id) => `/movie/${id}/recommendations`,
 }
 
 module.exports = API_ENDPOINTS;

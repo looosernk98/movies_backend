@@ -30,5 +30,10 @@ router.get('/:id', async(req, res) => {
     const response = await getApi(API_ENDPOINTS.movieDetailsById(id), req.query)
     res.send(response)
 });
+router.get('/:id/recommendations', async(req, res) => {
+    const { id } = req.params;
+    const response = await getApi(API_ENDPOINTS.recommendations(id))
+    res.send(response)
+});
 
 module.exports = router
