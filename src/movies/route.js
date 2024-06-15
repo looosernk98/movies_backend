@@ -5,23 +5,28 @@ const router = express.Router();
 // const { createUser, updateUser, getUserById, getAllUsers } = require('./controller');
 
 router.get('/top-rated', async(req, res) => {
-    const response = await getApi(API_ENDPOINTS.topRatedMovies)
+    const { page } = req.query
+    const response = await getApi(API_ENDPOINTS.topRatedMovies, { page})
     res.send(response)
 });
 router.get('/now_playing', async(req, res) => {
-    const response = await getApi(API_ENDPOINTS.currentWatchingMovies)
+    const { page } = req.query
+    const response = await getApi(API_ENDPOINTS.currentWatchingMovies, {page})
     res.send(response)
 });
 router.get('/popular', async(req, res) => {
-    const response = await getApi(API_ENDPOINTS.popularMovies)
+    const { page } = req.query
+    const response = await getApi(API_ENDPOINTS.popularMovies, {page})
     res.send(response)
 });
 router.get('/upcoming', async(req, res) => {
-    const response = await getApi(API_ENDPOINTS.upcoming)
+    const { page } = req.query
+    const response = await getApi(API_ENDPOINTS.upcoming, { page})
     res.send(response)
 });
 router.get('/trending', async(req, res) => {
-    const response = await getApi(API_ENDPOINTS.trendingMovies())
+    const { page } = req.query
+    const response = await getApi(API_ENDPOINTS.trendingMovies(), { page})
     res.send(response)
 });
 
