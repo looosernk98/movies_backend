@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 
   app.use('/api/movies/', movieRouter)
   app.use('/api/movie/', movieRouter)
+  app.use('/api/account/', movieRouter)
 
   // handling wrong request
   app.use((req, res, next) => {
